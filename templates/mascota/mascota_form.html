@@ -1,0 +1,63 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<form method="post" class="form-horizontal col-lg-6 col-md-offset-3 well">
+	{% csrf_token %}
+	<fieldset>
+		<legend>Crear nueva</legend>
+		<div class="form-group">
+			<label for="inputNombre" class="col-lg-4 control-label">{{ form.nombre.label }}</label>
+			<div class="col-lg-6">
+        		{{ form.nombre }}
+      		</div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputSexo" class="col-lg-4 control-label">{{ form.sexo.label }}</label>
+			<div class="col-lg-6">
+        		{{ form.sexo }}
+      		</div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputEdad" class="col-lg-4 control-label">{{ form.edad_aproximada.label }}</label>
+			<div class="col-lg-6">
+        		{{ form.edad_aproximada }}
+      		</div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputFecha" class="col-lg-4 control-label">{{ form.fecha_rescate.label }}</label>
+			<div class="col-lg-6">
+        		{{ form.fecha_rescate }}
+      		</div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputPersona" class="col-lg-4 control-label">{{ form.persona.label }}</label>
+			<div class="col-lg-6">
+        		{{ form.persona }}
+      		</div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputVacuna" class="col-lg-4 control-label">{{ form.vacuna.label }}</label>
+			<div class="col-lg-6">
+        		{{ form.vacuna }}
+      		</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-12 col-lg-offset-1">
+				<button type="submit" class="btn btn-info">Guardar</button>	
+			</div>
+			
+		</div>
+		
+
+	</fieldset>
+</form>
+
+
+{% endblock %}
